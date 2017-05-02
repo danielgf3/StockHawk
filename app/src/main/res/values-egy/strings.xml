@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="a11y_add_stock_button">إضافة أسهم جديدة</string>
+    <string name="dialog_add">إضافة</string>
+    <string name="dialog_cancel">إلغاء</string>
+    <string name="dialog_hint">الرمز (مثل GOOG)</string>
+    <string name="dialog_title">إضافة سهم</string>
+
+
+    <string name="error_no_network">لا اتصال الشبكة! سيتم تحميل مؤشر الأسهم عندما تكون الشبكة متاحة.</string>
+    <string name="error_no_stocks">لم يتم إضافة أي أسهم! ضرب زر العمل العائمة لإضافة واحد.</string>
+
+
+    <string name="pref_display_mode_absolute_key">مطلق</string>
+    <string name="pref_display_mode_key">وضع العرض</string>
+    <string name="pref_display_mode_percentage_key">النسبة المئوية</string>
+    <string name="pref_stocks_key">مخازن</string>
+
+    <string name="chart_price">السعر</string>
+    <string name="no_history">لا توجد بيانات السجل</string>
+
+
+    <string name="toast_no_connectivity">سيتم تحديث عندما الشبكة المتاحة</string>
+    <string name="toast_stock_added_no_connectivity"> تمت إضافة الرمز <xliff:g id="symbol">%1$s</xliff:g>. سيتم تحديث عندما الشبكة المتاحة.</string>
+    <string name="toast_no_valid_stock">السهم <xliff:g id="stock">%1$s</xliff:g> غير موجود.</string>
+</resources>
