@@ -40,10 +40,10 @@ public class StockWidgetRemoteViewsService extends RemoteViewsService {
 
                 final long identityToken = Binder.clearCallingIdentity();
                 data = getContentResolver().query(Contract.Quote.URI,
-                        Contract.Quote.QUOTE_COLUMNS.toArray(new String[]{}),
                         null,
                         null,
-                        null);
+                        null,
+                        Contract.Quote.COLUMN_SYMBOL);
                 Binder.restoreCallingIdentity(identityToken);
             }
 

@@ -73,7 +73,6 @@ public class StockDetailActivity extends AppCompatActivity {
 
     private void loadChart(String history){
         if(history.equals("")){
-            Log.e(TAG, "No data.");
             mLineChart.setVisibility(View.GONE);
             findViewById(R.id.tv_empty_history).setVisibility(View.VISIBLE);
             return;
