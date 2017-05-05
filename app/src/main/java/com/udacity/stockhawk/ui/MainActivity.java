@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
-import com.udacity.stockhawk.data.PrefUtils;
+import com.udacity.stockhawk.util.PrefUtils;
 import com.udacity.stockhawk.sync.QuoteSyncJob;
 
 import butterknife.BindView;
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onClick(String symbol) {
         Timber.d("Symbol clicked: %s", symbol);
         Intent detailIntent = new Intent(this, StockDetailActivity.class);
-        detailIntent.putExtra("symbol", symbol);
+        detailIntent.putExtra(StockDetailActivity.ID_EXTRA_DATA, symbol);
         startActivity(detailIntent);
     }
 

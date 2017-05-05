@@ -17,6 +17,8 @@ import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.udacity.stockhawk.R;
 import com.udacity.stockhawk.data.Contract;
+import com.udacity.stockhawk.util.MyXAxisValueFormatter;
+import com.udacity.stockhawk.util.MyYAxisValueFormatter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -26,6 +28,8 @@ import java.util.List;
 public class StockDetailActivity extends AppCompatActivity {
 
     private static final String TAG = "StockDetailActivity";
+
+    public static final String ID_EXTRA_DATA = "symbol";
 
     private LineChart mLineChart;
 
@@ -41,7 +45,7 @@ public class StockDetailActivity extends AppCompatActivity {
 
         mLineChart = (LineChart) findViewById(R.id.chart);
 
-        mSymbol = getIntent().getStringExtra("symbol");
+        mSymbol = getIntent().getStringExtra(ID_EXTRA_DATA);
 
         loadData(mSymbol);
     }
@@ -92,21 +96,23 @@ public class StockDetailActivity extends AppCompatActivity {
         }
 
         LineDataSet dataSet = new LineDataSet(entries, getString(R.string.chart_price));
-        dataSet.setColor(Color.RED);
+        dataSet.setColor(Color.BLACK);
         dataSet.setDrawFilled(true);
-        dataSet.setValueTextColor(Color.WHITE);
+        dataSet.setFillColor(Color.BLACK);
+        dataSet.setValueTextColor(Color.BLACK);
+        dataSet.setCircleColor(Color.RED);
 
         XAxis xAxis = mLineChart.getXAxis();
         xAxis.setValueFormatter(new MyXAxisValueFormatter(priceValues.toArray(new Long[priceValues.size()])));
         xAxis.setGranularity(1f);
         xAxis.setGranularityEnabled(true);
-        xAxis.setTextColor(Color.WHITE);
+        xAxis.setTextColor(Color.BLACK);
         mLineChart.getXAxis().setPosition(XAxis.XAxisPosition.BOTTOM);
 
         mLineChart.getAxisRight().setEnabled(false); // no right axis
         YAxis yAxisL = mLineChart.getAxisLeft();
         yAxisL.setValueFormatter(new MyYAxisValueFormatter());
-        yAxisL.setTextColor(Color.WHITE);
+        yAxisL.setTextColor(Color.BLACK);
 
         LineData lineData = new LineData(dataSet);
         mLineChart.setAutoScaleMinMaxEnabled(true);

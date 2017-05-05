@@ -9,6 +9,7 @@
 
     <string name="error_no_network">لا اتصال الشبكة! سيتم تحميل مؤشر الأسهم عندما تكون الشبكة متاحة.</string>
     <string name="error_no_stocks">لم يتم إضافة أي أسهم! ضرب زر العمل العائمة لإضافة واحد.</string>
+    <string name="empty_stocks_list">لا مخزون المعلومات المتاحة</string>
 
 
     <string name="pref_display_mode_absolute_key">مطلق</string>

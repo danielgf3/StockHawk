@@ -1,4 +1,4 @@
-package com.udacity.stockhawk.data;
+package com.udacity.stockhawk.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;

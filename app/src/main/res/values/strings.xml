@@ -29,6 +29,8 @@
     <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
     <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
 
+    <string name="empty_stocks_list">No Stocks Information Available</string>
+
 
     <string name="toast_stock_added_no_connectivity">Symbol <xliff:g id="symbol">%1$s</xliff:g> added. Will refresh when network available.</string>
     <string name="toast_no_connectivity">Will refresh when network available.</string>
@@ -36,6 +38,9 @@
 
     <string name="chart_price">Price</string>
     <string name="no_history">No history data</string>
+
+
+    <string name="title_widget" translatable="false">@string/app_name</string>
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
       - Used for Accessibility purposes (Accessibility == a11y)                            -
