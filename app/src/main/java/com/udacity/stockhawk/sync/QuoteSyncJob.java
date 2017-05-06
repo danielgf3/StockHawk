@@ -78,11 +78,12 @@ public final class QuoteSyncJob {
             ArrayList<ContentValues> quoteCVs = new ArrayList<>();
 
             while (iterator.hasNext()) {
-                final String symbol = iterator.next();
-                Stock stock = quotes.get(symbol);
-                StockQuote quote = stock.getQuote();
 
+                final String symbol = iterator.next();
                 try {
+                    Stock stock = quotes.get(symbol);
+                    StockQuote quote = stock.getQuote();
+
                     float price = quote.getPrice().floatValue();
                     float change = quote.getChange().floatValue();
                     float percentChange = quote.getChangeInPercent().floatValue();
