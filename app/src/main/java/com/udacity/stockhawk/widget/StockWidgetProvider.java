@@ -66,7 +66,6 @@ public class StockWidgetProvider extends AppWidgetProvider {
      *
      * @param views RemoteViews to set the RemoteAdapter
      */
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
     private void setRemoteAdapter(Context context, @NonNull final RemoteViews views) {
         views.setRemoteAdapter(R.id.widget_list,
                 new Intent(context, StockWidgetRemoteViewsService.class));
